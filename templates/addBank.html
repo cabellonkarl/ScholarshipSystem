@@ -1,0 +1,136 @@
+<!doctype html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Add Bank</title>
+    
+    <link rel="stylesheet" href="../static/assets/css/style.css">
+    <!-- Font Icon -->
+    <link rel="stylesheet" href="../static/add/fonts/material-icon/css/material-design-iconic-font.min.css">
+
+    <!-- Main css -->
+    <link rel="stylesheet" href="../static/add/css/style.css">
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/unicons.css' %}">
+    <link rel="stylesheet" href="{% static 'css/owl.carousel.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/owl.theme.default.min.css' %}">
+
+    <!-- MAIN STYLE -->
+    <link rel="stylesheet" href="{% static 'css/tooplate-style.css' %}">
+    
+    
+<!--
+
+Tooplate 2115 Marvel
+
+https://www.tooplate.com/view/2115-marvel
+
+-->
+  </head>
+  <body>
+
+    <!-- MENU -->
+    <nav class="navbar navbar-expand-sm navbar-light">
+        <div class="container">
+            <a class="navbar-brand" href={%url "final:my_index_view"%}><i class='uil uil-award'></i> SAM</a>
+
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+                <span class="navbar-toggler-icon"></span>
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav mx-auto">
+                    <li class="nav-item">
+                        <a href={%url "final:my_dashboard_view"%} class="nav-link"><span data-hover="Dashboard">Dashboard</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#resume" class="nav-link"><span data-hover="Features">Features</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#resume" class="nav-link"><span data-hover="About Us">About Us</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#resume" class="nav-link"><span data-hover="Contact Us">Contact Us</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#contact" class="nav-link"><span data-hover="Sign In">Sign In</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#contact" class="nav-link"><span data-hover="Sign Up">Sign Up</span></a>
+                    </li>
+                </ul>
+
+                <ul class="navbar-nav ml-lg-auto">
+                    <div class="ml-lg-4">
+                      <div class="color-mode d-lg-flex justify-content-center align-items-center">
+                        <i class="color-mode-icon"></i>
+                        Color mode
+                      </div>
+                    </div>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    
+        <!-- Sign up form -->
+        <section class="signup">
+            <div class="containerer">
+                <div class="signup-content">
+                    <div class="signup-form">
+                        <h2 class="form-title">Add Bank</h2>
+                        <form method="POST" class="register-form" id="register-form">
+                            {% csrf_token %}
+                            <div class="form-group">
+                                <label for="bname"><i class="zmdi zmdi-account material-icons-name"></i></label>
+                                <input type="text" name="bankName" id="bname" placeholder="Bank Name" required/>
+                            </div>
+                            <div class="form-group form-button">
+                                <input type="submit" name="add" id="add" class="form-submit" value="Add Bank"/>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="signup-image">
+                        <figure><img src="../static/images/undraw/undraw_software_engineer_lvl5.svg" class="img-fluid" alt="svg image"></figure>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    <!-- FOOTER -->
+     <footer class="footer py-5">
+          <div class="container">
+               <div class="row">
+
+                    <div class="col-lg-12 col-12">                                
+                        <p class="copyright-text text-center">Copyright &copy; 2021 CaSa . All rights reserved</p>
+                        <p class="copyright-text text-center">Karl Thomas T. Cabellon</p>
+                        <p class="copyright-text text-center">Mary Yssabelle B. Hermosa</p>
+                        <p class="copyright-text text-center">CSIT327 F1-C1</p>
+                        <p class="copyright-text text-center">AY 2021-2022</p>
+                    </div>
+                    
+               </div>
+          </div>
+     </footer>
+
+    <script src="{% static 'js/jquery-3.3.1.min.js' %}"></script>
+    <script src="{% static 'js/popper.min.js' %}"></script>
+    <script src="{% static 'js/bootstrap.min.js' %}"></script>
+    <script src="{% static 'js/Headroom.js' %}"></script>
+    <script src="{% static 'js/jQuery.headroom.js' %}"></script>
+    <script src="{% static 'js/owl.carousel.min.js' %}"></script>
+    <script src="{% static 'js/smoothscroll.js' %}"></script>
+    <script src="{% static 'js/custom.js' %}"></script>
+
+  </body>
+</html>
